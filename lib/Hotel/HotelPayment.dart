@@ -249,13 +249,13 @@ class _HotelPaymentState extends State<HotelPayment> {
                 Container(
                   height: 45,
                   margin: EdgeInsets.only(left: 18,right: 18),
-                  child: FormFeildText("שם באנגלית (כפי שמופיע בדרכון)"),
+                  child: FormFeildText("שם באנגלית (כפי שמופיע בדרכון)",Colors.grey[600]!),
                 ),
                 SizedBox(height: 20,),
                 Container(
                   height: 45,
                   margin: EdgeInsets.only(left: 18,right: 18),
-                  child: FormFeildText("שם משפחה באנגלית (כפי שמופיע בדרכון)"),
+                  child: FormFeildText("שם משפחה באנגלית (כפי שמופיע בדרכון)",Colors.grey[600]!),
                 ),
                 SizedBox(height: 35,),
                 Row(
@@ -268,13 +268,13 @@ class _HotelPaymentState extends State<HotelPayment> {
                 Container(
                   height: 45,
                   margin: EdgeInsets.only(left: 18,right: 18),
-                  child: FormFeildText("שם באנגלית (כפי שמופיע בדרכון)"),
+                  child: FormFeildText("שם באנגלית (כפי שמופיע בדרכון)",Colors.grey[600]!),
                 ),
                 SizedBox(height: 20,),
                 Container(
                   height: 45,
                   margin: EdgeInsets.only(left: 18,right: 18),
-                  child: FormFeildText("שם משפחה באנגלית (כפי שמופיע בדרכון)"),
+                  child: FormFeildText("שם משפחה באנגלית (כפי שמופיע בדרכון)",Colors.grey[600]!),
                 ),
                 SizedBox(height: 30,),
                 Row(
@@ -287,13 +287,13 @@ class _HotelPaymentState extends State<HotelPayment> {
                 Container(
                   height: 45,
                   margin: EdgeInsets.only(left: 18,right: 18),
-                  child: FormFeildText("מספר פלפון"),
+                  child: FormFeildText("מספר פלפון",Colors.grey[600]!),
                 ),
                 SizedBox(height: 20,),
                 Container(
                   height: 45,
                   margin: EdgeInsets.only(left: 18,right: 18),
-                  child: FormFeildText("דוא\"ל"),
+                  child: FormFeildText("דוא\"ל",Colors.grey[600]!),
                 ),
                 SizedBox(height: 50,),
 

@@ -40,7 +40,7 @@ class _LifeSureState extends State<LifeSure> {
             SizedBox(height: 10,),
             Container(
                 margin: EdgeInsets.only(left: 32,right: 32),
-                child: FormFeildText("שם מלא")
+                child: FormFeildText("שם מלא",Colors.grey[600]!)
             ),
 
             SizedBox(height: 40,),
@@ -142,12 +142,12 @@ class _LifeSureState extends State<LifeSure> {
             SizedBox(height: 40,),
             Container(
                 margin: EdgeInsets.only(left: 32,right: 32),
-                child: FormFeildText("גיל",number: true)
+                child: FormFeildText("גיל",Colors.grey[600]!,number: true)
             ),
             SizedBox(height: 25,),
             Container(
                 margin: EdgeInsets.only(left: 32,right: 32),
-                child: FormFeildText("עיסוק")
+                child: FormFeildText("עיסוק",Colors.grey[600]!)
             ),
             SizedBox(height: 40,),
           //  Button(context,size,(){},BorderRadius.circular(5),"שליחת בקשה"),

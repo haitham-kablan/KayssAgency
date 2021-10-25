@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "234242460503",
+    "project_id": "kayssagency",
+    "storage_bucket": "kayssagency.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:234242460503:android:32326962e3ad48d6e50c12",
+        "android_client_info": {
+          "package_name": "com.kaysagency.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "234242460503-siiod5ah6d4ilfks9oe35jtdepjgiqak.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDXyzi8iSTCoB2Fe2fouQmBH7vaH-kaCYw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "234242460503-siiod5ah6d4ilfks9oe35jtdepjgiqak.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -67,6 +67,7 @@ flutter:
     - assets/stamPics/
     - assets/hotelLux/
     - assets/payment/
+    - assets/utils/
 
 
   # An image asset can refer to one or more resolution-specific "variants", see

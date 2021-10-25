@@ -96,13 +96,13 @@ class _CarSureState extends State<CarSure> {
                         Container(
                           height: 45,
                           margin: EdgeInsets.only(left: 40,right: 40),
-                          child: FormFeildText("מספר רישוי"),
+                          child: FormFeildText("מספר רישוי",Colors.grey[600]!),
                         ),
                         SizedBox(height: 25,),
                         Container(
                           height: 45,
                           margin: EdgeInsets.only(left: 40,right: 40),
-                          child: FormFeildText("מספר רישוי"),
+                          child: FormFeildText("מספר רישוי",Colors.grey[600]!),
                         ),
                         SizedBox(height: 40,),
                         Row(
@@ -598,13 +598,13 @@ class _CarSureState extends State<CarSure> {
                         Container(
                           height: 45,
                           margin: EdgeInsets.only(left: 40,right: 40),
-                          child: FormFeildText("דוא\"ל"),
+                          child: FormFeildText("דוא\"ל",Colors.grey[600]!),
                         ),
                         SizedBox(height: 25,),
                         Container(
                           height: 45,
                           margin: EdgeInsets.only(left: 40,right: 40),
-                          child: FormFeildText("מספר פלפון"),
+                          child: FormFeildText("מספר פלפון",Colors.grey[600]!),
                         ),
                         SizedBox(height: 60,),
                        Button(context,(){},BorderRadius.circular(15),"שליחת בקשה",size.width * 0.8,40.0,darkBlueClr),
