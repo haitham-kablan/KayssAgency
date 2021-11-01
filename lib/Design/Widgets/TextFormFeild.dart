@@ -5,8 +5,10 @@ import 'package:app/Design/ColorsPallete/NewClr.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-FormFeildText(String label, Color labelClr,{bool number = false,Color borderClr = darkBlueClr ,Color txtColor = darkBlueClr}){
+FormFeildText(String label, Color labelClr,{bool number = false,Color borderClr = darkBlueClr ,Color txtColor = darkBlueClr,controler = null,bool secure = false}){
   return TextFormField(
+    obscureText: secure,
+    controller: controler,
     keyboardType: number ? TextInputType.number : null,
     decoration: InputDecoration(
       focusedBorder:OutlineInputBorder(
@@ -22,7 +24,7 @@ FormFeildText(String label, Color labelClr,{bool number = false,Color borderClr 
       labelStyle: TextStyle(color: labelClr),
     ),
     style: GoogleFonts.mPlus1p(
-      color: darkBlueClr,fontSize: 13
+      color: txtColor,fontSize: 13
     ),
   );
 }

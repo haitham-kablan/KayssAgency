@@ -19,6 +19,7 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   var rnd = new Random();
+  bool start = false;
   bool signiIn = false;
 
   final List<String> images = [
@@ -33,6 +34,13 @@ class _HomeScreenState extends State<HomeScreen> {
     "assets/homeBackGround/9.png",
   ];
 
+  @override
+  void initState(){
+    super.initState();
+    setState(() {
+      start=true;
+    });
+  }
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -187,46 +195,50 @@ class _HomeScreenState extends State<HomeScreen> {
                             ),
                           ),
                         ):
-                    Container(
-                      margin: EdgeInsets.only(top: 40),
-                      height: 140,
-                      width: size.width,
-                      decoration: BoxDecoration(
-                        color: darkBlueClr.withOpacity(0.7),
-                        // borderRadius: BorderRadius.only(
-                        //   topRight: Radius.circular(60),
-                        //   topLeft: Radius.circular(60),
-                        // )
-                      ),
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.end,
-                        children: [
-                          //   SizedBox(height: 45,),
-                          RichText(text: TextSpan(
-                              children: [
-                                TextSpan(
-                                    text:"עדיין אין לך משתמש?",style: simpleTextStyle(17, Colors.white)),
-                                TextSpan(
-                                    text:" הרשמה",style: simpleTextStyle(17, blueClr),
-                                  recognizer: TapGestureRecognizer()..onTap = () => setState(() {
-                                    signiIn=true;
-                                  }),),
-                              ]
-                          )),
-                          // Spacer(flex: 1,),
-                          SizedBox(height: 10,),
-                          Button(context, (){
-                            showModalBottomSheet(context: context, builder: (context){
-                              return Container(
-                                color: Colors.red,
-                                width: size.width,
-                                height: 400,
-                              );
-                            });
-                          }, BorderRadius.circular(15), "כניסה",size.width * 0.35,30,blueClr),
-                          SizedBox(height: 25,),
-                          //
-                        ],
+                    AnimatedPositioned(
+                     bottom: 100,
+                      duration: Duration(milliseconds: 500),
+                      child: Container(
+                        margin: EdgeInsets.only(top: 40),
+                       height: start? 200 : 140,
+                        width: size.width,
+                        decoration: BoxDecoration(
+                          color: darkBlueClr.withOpacity(0.7),
+                          // borderRadius: BorderRadius.only(
+                          //   topRight: Radius.circular(60),
+                          //   topLeft: Radius.circular(60),
+                          // )
+                        ),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.end,
+                          children: [
+                            //   SizedBox(height: 45,),
+                            RichText(text: TextSpan(
+                                children: [
+                                  TextSpan(
+                                      text:"עדיין אין לך משתמש?",style: simpleTextStyle(17, Colors.white)),
+                                  TextSpan(
+                                      text:" הרשמה",style: simpleTextStyle(17, blueClr),
+                                    recognizer: TapGestureRecognizer()..onTap = () => setState(() {
+                                      signiIn=true;
+                                    }),),
+                                ]
+                            )),
+                            // Spacer(flex: 1,),
+                            SizedBox(height: 10,),
+                            Button(context, (){
+                              showModalBottomSheet(context: context, builder: (context){
+                                return Container(
+                                  color: Colors.red,
+                                  width: size.width,
+                                  height: 400,
+                                );
+                              });
+                            }, BorderRadius.circular(15), "כניסה",size.width * 0.35,30,blueClr),
+                            SizedBox(height: 25,),
+                            //
+                          ],
+                        ),
                       ),
                     ),
                     !signiIn ? Align(

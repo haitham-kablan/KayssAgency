@@ -1,5 +1,5 @@
 
-import 'package:app/Car/CarSure.dart';
+import 'package:app/NavBarScreens/CarSure.dart';
 import 'package:app/Contact/Contact.dart';
 import 'package:app/Design/Animation/Animation.dart';
 import 'package:app/Design/ColorsPallete/ColorsPallete.dart';

@@ -7,7 +7,8 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 class AppBarProvider extends StatelessWidget {
-  const AppBarProvider({Key? key}) : super(key: key);
+  final int index;
+  const AppBarProvider({Key? key, required this.index}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -22,8 +23,8 @@ class AppBarProvider extends StatelessWidget {
             Image.asset("assets/logo.png",height: 50,width: 100,),
             Spacer(flex: 1,),
             IconButton(onPressed: (){
-              Provider.of<toggleProvider>(context,listen: false).setToggle(4);
-            }, icon: Icon(Icons.keyboard_arrow_down_sharp,color: Colors.white,),),
+              Provider.of<toggleProvider>(context,listen: false).setToggle(index);
+            }, icon: Icon(Icons.chevron_right ,color: Colors.white,),iconSize: 20,),
           ],
         ),
       ),

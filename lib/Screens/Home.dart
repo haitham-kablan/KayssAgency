@@ -1,6 +1,6 @@
 
 
-import 'package:app/Car/CarSure.dart';
+import 'package:app/NavBarScreens/CarSure.dart';
 import 'package:app/Design/Animation/Animation.dart';
 import 'package:app/Design/ColorsPallete/NewClr.dart';
 import 'package:app/Design/FontStyle/FontStyle.dart';
@@ -9,6 +9,7 @@ import 'package:app/Design/Widgets/SemiAppBar.dart';
 import 'package:app/Home/HomePage.dart';
 import 'package:app/HomeScreen/HomeScreen.dart';
 import 'package:app/HomeScreen/NefeshScreen.dart';
+import 'package:app/Providers/AuthProvider.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
@@ -16,6 +17,7 @@ import 'package:flutter_zoom_drawer/flutter_zoom_drawer.dart';
 import 'package:modal_bottom_sheet/modal_bottom_sheet.dart';
 import 'package:provider/provider.dart';
 
+import '../logInScreen.dart';
 import 'nefesh.dart';
 
 class Home extends StatefulWidget {
@@ -23,6 +25,8 @@ class Home extends StatefulWidget {
 
   @override
   _HomeState createState() => _HomeState();
+
+
 }
 
 class _HomeState extends State<Home> {
@@ -34,8 +38,10 @@ class _HomeState extends State<Home> {
     NefeshScreen(),
     CarSure(),
     NefeshScreen(),
-    HomeScreen(),
-
+    ChangeNotifierProvider(
+        create: (_) => currentUserProvider(),
+        child: LogInScreen()
+    )
   ];
 
   @override
@@ -46,6 +52,7 @@ class _HomeState extends State<Home> {
     Size size = MediaQuery.of(context).size;
     return SafeArea(
       child: Scaffold(
+
         bottomNavigationBar: NavigationBarTheme(
           data: NavigationBarThemeData(
             indicatorColor: provIndex == 4 ? Colors.transparent : darkBlueClr,
@@ -53,6 +60,7 @@ class _HomeState extends State<Home> {
           child: NavigationBar(
             selectedIndex: index,
             onDestinationSelected: (nindex){
+
               print(nindex);
               Provider.of<toggleProvider>(context,listen: false).setToggle(nindex);
               setState(() {
